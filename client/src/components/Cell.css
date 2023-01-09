@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Unbounded:wght@600&display=swap');
+
+.cell {
+    height: 150px;
+    width: 150px;
+    border: 4px solid black;
+    font-family: 'Unbounded';
+    font-size: 6rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+    border-top: none;
+  }
+  
+  .cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+    border-bottom: none;
+  }
+
+  .cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+    border-left: none;
+  }
+
+  .cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+    border-right: none;
+  }
+
+  .cell:hover {
+    cursor: pointer;
+  }
+
+ .cell:not(:empty){
+  cursor: not-allowed;
+ }
+.cell.X {
+  height: 100px;
+  length: 100px;
+  background: black;
+}
+
+  
+  @media (max-width: 700px) {
+    .cell {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: .75rem 1.5rem;
+  }
+}
+
+
+
+
+

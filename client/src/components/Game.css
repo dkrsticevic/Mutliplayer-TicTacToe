@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Unbounded:wght@600&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  background-image: linear-gradient(to right, rgb(255, 251, 0) , rgb(255, 236, 127));
+}
+
+
+game {
+    margin: none;
+    width: 90vw;
+  }
+  
+  .main-section {
+    height: 84vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3,auto);
+  }
+
+.victory-screen { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  height: 50px;
+  width: 200px;
+  background-color: black;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-weight: bold;
+  transition: 200ms;
+  border: 0;
+  font-size: 30px;
+  opacity: 100%;
+}
+
+.victory-screen button:not(:disabled):hover {
+  background-color: red;
+}
+
+button:not(:disabled):hover,
+button:not(:disabled):focus,
+input:not(:disabled):hover, 
+input:not(:disabled):focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.roomName {
+  background-color: rgba(0,0,0,0);
+  border-bottom: 3px solid black;
+  height:85px;
+  width:100%;
+  position:fixed;
+  top:0px;
+  left:0px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.roomType{
+  margin-left: auto;
+}
+
+.roomType input::placeholder{
+  color: black;
+  opacity: .2;
+}
+
+.roomType button{
+  font-family: unbounded;
+  font-weight: bold;
+  height: 35px;
+  width: 50px;
+  font-size: 16px;
+}
+
+.roomType input {
+  font-family: unbounded;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 12px;
+  outline:2px solid black;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: 200ms;
+  width: 150px;
+  height: 30px;
+  border: 0;
+  font-size: 16px;
+}
+
+text {
+  color: white;
+  font-family: unbounded;
+  font-weight: bold;
+  text-align: center;
+  border: 0;
+  font-size: 52px;
+}
+
+.roomName text{
+  color: black;
+  font-family: unbounded;
+  font-weight: bold;
+  font-size: 40px;
+  flex: 1;
+  z-index: -1;
+  transform: translateX(95px);
+}
+
+.errorHandle{
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  margin-left: auto;
+  text-align: center;
+}
+.message:not(:empty){
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loading{
+  font-family: Arial, Helvetica, sans-serif;
+  width: 20px;
+  margin-left: auto;
+}
+
+.whoTurn{
+  display: flex;
+  color: black;
+  justify-content: center;
+  font-size: 30px;
+  padding-top: 90px;
+}
